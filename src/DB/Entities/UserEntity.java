@@ -4,15 +4,16 @@ import javax.persistence.*;
 import java.util.Set;
 
 /**
- * Created by Marthin on 2016-11-08.
+ * Created by Marthin on 2016-11-11.
  */
 @Entity
-@Table(name = "user", schema = "lab1", catalog = "")
+@Table(name = "user", schema = "lab1")
 public class UserEntity {
     private int userId;
     private String username;
     private String password;
     private Set<PostEntity> posts;
+
     @Id
     @Column(name = "user_id")
     public int getUserId() {
@@ -24,7 +25,7 @@ public class UserEntity {
     }
 
     @Basic
-    @Column(name = "username")
+    @Column(name = "username", length = 50)
     public String getUsername() {
         return username;
     }
@@ -34,7 +35,7 @@ public class UserEntity {
     }
 
     @Basic
-    @Column(name = "password")
+    @Column(name = "password", length = 20)
     public String getPassword() {
         return password;
     }
@@ -47,10 +48,10 @@ public class UserEntity {
     public Set<PostEntity> getPosts() {
         return this.posts;
     }
+
     public void setPosts(Set<PostEntity> posts) {
         this.posts = posts;
     }
-
 
     @Override
     public boolean equals(Object o) {

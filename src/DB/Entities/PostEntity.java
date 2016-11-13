@@ -4,17 +4,18 @@ import javax.persistence.*;
 import java.sql.Date;
 
 /**
- * Created by Marthin on 2016-11-08.
+ * Created by Marthin on 2016-11-11.
  */
 @Entity
-@Table(name = "post", schema = "lab1", catalog = "")
+@Table(name = "post", schema = "lab1")
 public class PostEntity {
     private int postId;
     private String body;
     private Date creationDate;
     private UserEntity user;
+
     @Id
-    @Column(name = "post_id")
+    @Column(name = "post_id", nullable = false)
     public int getPostId() {
         return postId;
     }
@@ -48,6 +49,7 @@ public class PostEntity {
     public UserEntity getUser() {
         return this.user;
     }
+
     public void setUser(UserEntity user) {
         this.user = user;
     }
