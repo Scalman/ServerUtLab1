@@ -26,7 +26,8 @@ public class UserBean {
         this.user = user;
     }
 
-    public void register(){
+    public String register(){
         userManager.register(this.user);
+        return "/index.xhtml";
     }
 }

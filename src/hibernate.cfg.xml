@@ -24,7 +24,7 @@
 
         <!-- mapping -->
         <mapping class="DB.Entities.PostEntity"/>
-        <mapping class="DB.Entities.UserEntity"/>
+        <mapping class="DB.Entities.User"/>
 
     </session-factory>
 

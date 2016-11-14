@@ -13,7 +13,7 @@
             <h:outputLabel value="Password: "/><br/>
             <h:inputSecret id="password" value="#{userBean.user.password}"/><br/><br/>
             <h:outputLabel value="Confirm password: "/><br/>
-            <h:inputSecret  id="confirmPassword" value="#{confpass}"/><br/><br/>
+            <h:inputSecret  id="confirmPassword"/><br/><br/>
             <h:commandButton value="Submit" action="#{userBean.register}" />
         </h:form>
     </h:body>
