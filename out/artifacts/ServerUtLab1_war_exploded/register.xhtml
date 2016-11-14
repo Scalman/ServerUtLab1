@@ -2,10 +2,11 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml"
       xmlns:h="http://xmlns.jcp.org/jsf/html">
-<h:head>
-    <title>Hello World - Input Form</title>
-</h:head>
+    <h:head>
+        <title>Register</title>
+    </h:head>
     <h:body>
+        <h1>LOGIN</h1>
         <h:form>
 
             <h:outputLabel value="Username: "/><br/>
@@ -14,7 +15,7 @@
             <h:inputSecret id="password" value="#{userBean.user.password}"/><br/><br/>
             <h:outputLabel value="Confirm password: "/><br/>
             <h:inputSecret  id="confirmPassword"/><br/><br/>
-            <h:commandButton value="Submit" action="#{userBean.register}" />
+            <h:commandButton value="Register" action="#{userBean.register}" />
         </h:form>
     </h:body>
 </html>

@@ -12,7 +12,7 @@ public class PostEntity {
     private int postId;
     private String body;
     private Date creationDate;
-    private User user;
+    private UserEntity user;
 
     @Id
     @Column(name = "post_id", nullable = false)
@@ -46,11 +46,11 @@ public class PostEntity {
 
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "user_id", nullable = false)
-    public User getUser() {
+    public UserEntity getUser() {
         return this.user;
     }
 
-    public void setUser(User user) {
+    public void setUser(UserEntity user) {
         this.user = user;
     }
 

@@ -28,6 +28,12 @@ public class UserBean {
 
     public String register(){
         userManager.register(this.user);
-        return "/index.xhtml";
+        return "/login.xhtml";
+    }
+    public String login(){
+        if(userManager.login(this.user)){
+            return "/home.xhtml";
+        }
+        return "/login.xhtml";
     }
 }

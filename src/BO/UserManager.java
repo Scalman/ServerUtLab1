@@ -19,8 +19,7 @@ public class UserManager {
     public boolean login(UserViewModel user) {
         this.user = user;
         this.user.setPassword(digestPassword(this.user.getPassword()));
-        //db.authenticate(this.user)
-        return true;
+        return db.authenticate(this.user);
     }
 
     public void register(UserViewModel user) {

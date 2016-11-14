@@ -8,7 +8,7 @@ import java.util.Set;
  */
 @Entity
 @Table(name = "user", schema = "lab1")
-public class User {
+public class UserEntity {
     private int userId;
     private String username;
     private String password;
@@ -58,7 +58,7 @@ public class User {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
 
-        User that = (User) o;
+        UserEntity that = (UserEntity) o;
 
         if (userId != that.userId) return false;
         if (username != null ? !username.equals(that.username) : that.username != null) return false;
